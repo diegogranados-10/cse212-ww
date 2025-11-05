@@ -1,3 +1,5 @@
-﻿Console.WriteLine("\n======================\nCustomer Service\n======================");
+﻿ComplexStack.Main();
+
+Console.WriteLine("\n======================\nCustomer Service\n======================");
 CustomerService.Run();
 CustomerServiceSolution.Run();
