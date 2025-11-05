@@ -183,6 +183,6 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        },
+        }
     ]
 }
