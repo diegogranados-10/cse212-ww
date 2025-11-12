@@ -32,7 +32,20 @@ public class Maze
     /// </summary>
     public void MoveLeft()
     {
-        // FILL IN CODE
+        var currentPos = (_currX, _currY);
+        if (!_mazeMap.ContainsKey(currentPos))
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        var directions = _mazeMap[currentPos];
+        // Index 0 is left
+        if (!directions[0])
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        _currX--;
     }
 
     /// <summary>
@@ -41,7 +54,20 @@ public class Maze
     /// </summary>
     public void MoveRight()
     {
-        // FILL IN CODE
+        var currentPos = (_currX, _currY);
+        if (!_mazeMap.ContainsKey(currentPos))
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        var directions = _mazeMap[currentPos];
+        // Index 1 is right
+        if (!directions[1])
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        _currX++;
     }
 
     /// <summary>
@@ -50,7 +76,20 @@ public class Maze
     /// </summary>
     public void MoveUp()
     {
-        // FILL IN CODE
+        var currentPos = (_currX, _currY);
+        if (!_mazeMap.ContainsKey(currentPos))
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        var directions = _mazeMap[currentPos];
+        // Index 2 is up
+        if (!directions[2])
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        _currY--;
     }
 
     /// <summary>
@@ -59,7 +98,20 @@ public class Maze
     /// </summary>
     public void MoveDown()
     {
-        // FILL IN CODE
+        var currentPos = (_currX, _currY);
+        if (!_mazeMap.ContainsKey(currentPos))
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        var directions = _mazeMap[currentPos];
+        // Index 3 is down
+        if (!directions[3])
+        {
+            throw new InvalidOperationException("Can't go that way!");
+        }
+        
+        _currY++;
     }
 
     public string GetStatus()
